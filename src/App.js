@@ -8,16 +8,16 @@ class BooksApp extends React.Component {
   
   render() {
     return (
-      <div className="app">
-        <Route exact path='/' render={({ history }) => (
-                <BookshelfContainer/>
-            )}
-        />
-        <Route exact path='/search' render={() => (
-                <SearchBookContainer/>
-            )}
-        />
-      </div>
+        <div className="app">
+            <Route exact path='/' render={({ history }) => (
+                    <BookshelfContainer/>
+                )}
+            />
+            <Route exact path='/search' render={() => (
+                    <SearchBookContainer/>
+                )}
+            />
+        </div>
     )
   }
 }

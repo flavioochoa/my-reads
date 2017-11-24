@@ -37,7 +37,6 @@ class BookshelfContainer extends Component{
                 <div className="open-search">
                     <Link to='/search'>Add a book</Link>
                 </div>
-
                 <MessageNotification content={this.state.content} isVisible={this.state.isVisible}/>
             </div>
         );

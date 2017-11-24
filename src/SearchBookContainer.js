@@ -49,11 +49,7 @@ class SearchBookContainer extends Component{
                 } else {
                     books.forEach((book) => {
                         var res = this.state.actualBooks.find(x => x.id === book.id);
-                        if(res){
-                            book.shelf = res.shelf;
-                        } else {
-                            book.shelf = '';
-                        }
+                        book.shelf =  res ? res.shelf : '';
                     }); 
 
                     this.setState({books, hasEmptyQuery:false});
