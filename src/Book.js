@@ -47,16 +47,15 @@ class Book extends Component {
 
     render(){
         var book = this.props.book;
-        var style = { 
+
+        var bookCoverStyle = { 
             width: "128px", 
             height: "193px", 
-            backgroundImage: 
-            `url("${book.imageLinks.smallThumbnail}")`, 
             backgroundRepeat: "no-repeat",
             cursor:'pointer'
         };
 
-        var anotherStyle = {
+        var radioGroupStyle = {
             top: "212px",
             left: "18px",
             zIndex: 1000,
@@ -69,13 +68,13 @@ class Book extends Component {
         return (
             <div className="book">
                 <div className="book-top">
-                    <div className="book-cover" style={style} 
+                    <div className="book-cover" style={bookCoverStyle} 
                         onClick={this.showDetails.bind(this)}>
+                        <img alt="book" src={book.imageLinks.smallThumbnail} width="128" height="193"/>
                     </div>
                     <div className="book-shelf-changer" onClick={this.handleClick} ref={node => { this.node = node; }}>
-                        
                     </div>
-                    <div style={anotherStyle}>
+                    <div style={radioGroupStyle}>
                         <RadioGroup isOpen={this.state.isOpen}
                             options={this.state.options} 
                             onChange={this.props.onChangeShelf.bind(this, book)} 
