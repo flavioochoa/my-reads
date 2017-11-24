@@ -185,3 +185,12 @@ body, .app {
 .white-label {
     padding: 2px;
 }
+
+.dark-toast{
+    background: #4a498d !important;
+    color: #fff !important;
+}
+
+  .dark-toast > .toastify__close{
+    color: #fff !important;
+  }

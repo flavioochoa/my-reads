@@ -4,5 +4,6 @@ import App from './App'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import 'semantic-ui-css/semantic.min.css';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'))
