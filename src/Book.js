@@ -6,7 +6,7 @@ import RadioGroup from './RadioGroup';
 class Book extends Component {
     constructor() {
         super();
-    
+        //based on https://codepen.io/graubnla/pen/EgdgZm
         this.handleClick = this.handleClick.bind(this);
         this.handleOutsideClick = this.handleOutsideClick.bind(this);
     
