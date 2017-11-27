@@ -47,34 +47,16 @@ class Book extends Component {
 
     render(){
         var book = this.props.book;
-
-        var bookCoverStyle = { 
-            width: "128px", 
-            height: "193px", 
-            backgroundRepeat: "no-repeat",
-            cursor:'pointer'
-        };
-
-        var radioGroupStyle = {
-            top: "212px",
-            left: "18px",
-            zIndex: 1000,
-            width: "116px",
-            position: "absolute",
-            background: "#4a498d",
-            borderRadius: "10px",
-        }
-
         return (
             <div className="book">
                 <div className="book-top">
-                    <div className="book-cover" style={bookCoverStyle} 
+                    <div className="book-cover book-cover-style"
                         onClick={this.showDetails.bind(this)}>
                         <img alt="book" src={book.imageLinks.smallThumbnail} width="128" height="193"/>
                     </div>
                     <div className="book-shelf-changer" onClick={this.handleClick} ref={node => { this.node = node; }}>
                     </div>
-                    <div style={radioGroupStyle}>
+                    <div className="radio-group-style">
                         <RadioGroup isOpen={this.state.isOpen}
                             options={this.state.options} 
                             onChange={this.props.onChangeShelf.bind(this, book)} 

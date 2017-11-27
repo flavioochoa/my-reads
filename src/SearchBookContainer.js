@@ -4,6 +4,7 @@ import BooksList from './BooksList';
 import * as BooksApi from './BooksAPI.js';
 import MessageNotification from './MessageNotification';
 import helper from './helper';
+import { Debounce } from 'react-throttle';
 
 class SearchBookContainer extends Component{
     state = {
@@ -20,8 +21,11 @@ class SearchBookContainer extends Component{
                 <div className="search-books-bar">
                     <Link className="close-search" to='/'>Close</Link>
                     <div className="search-books-input-wrapper">
-                        <input type="text" placeholder="Search by title or author" onChange={this.handleSearchChange.bind(this)}/>
+                        <Debounce time="200" handler="onChange">
+                            <input type="text" placeholder="Search by title or author" onChange={this.handleSearchChange.bind(this)}/>
+                        </Debounce>
                     </div>
+                    
                 </div>
                 <div className="search-books-results">
                     {

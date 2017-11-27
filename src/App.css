@@ -195,7 +195,7 @@ body, .app {
     color: #fff !important;
   }
 
-  img {
+img {
     display: block;
     position: absolute;
     top: 50%;
@@ -203,4 +203,22 @@ body, .app {
     min-height: 100%;
     min-width: 100%;
     transform: translate(-50%, -50%);
-  }
+}
+
+
+.book-cover-style { 
+    width: 128px; 
+    height: 193px; 
+    background-repeat: no-repeat;
+    cursor: 'pointer';
+}   
+
+.radio-group-style {
+    top: 212px;
+    left: 18px;
+    z-index: 1000;
+    width: 116px;
+    position: absolute;
+    background: #4a498d;
+    border-radius: 10px;
+}

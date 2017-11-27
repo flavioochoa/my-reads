@@ -4,9 +4,7 @@ import { Route } from 'react-router-dom';
 import BookshelfContainer from './BookshelfContainer.js';
 import SearchBookContainer from './SearchBookContainer.js';
 
-class BooksApp extends React.Component {
-  
-  render() {
+const BooksApp = () => {
     return (
         <div className="app">
             <Route exact path='/' render={({ history }) => (
@@ -18,8 +16,7 @@ class BooksApp extends React.Component {
                 )}
             />
         </div>
-    )
-  }
+    );
 }
 
 export default BooksApp

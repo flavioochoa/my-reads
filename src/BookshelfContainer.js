@@ -55,9 +55,6 @@ class BookshelfContainer extends Component{
                 });
             });
             this.setState({currentlyReading : container.currentlyReading, wantToRead : container.wantToRead, read:container.read, isVisible:true, content: `${book.title} changed to ${helper.getShelf(value)}` });
-            /*setTimeout(() => {
-                this.setState({ isVisible: false });
-            }, 2000)*/
         });
     }
       

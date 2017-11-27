@@ -1,27 +1,25 @@
-import React,{ Component } from 'react';
+import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
-class MessageNotification extends Component {
-    notify = () => toast(this.props.content);
+const notify = (props) => toast(props.content);
 
-    render(){
-        if(this.props.isVisible){
-            this.notify();
-            return (
-                <ToastContainer 
-                        position="bottom-right"
-                        autoClose={5000}
-                        hideProgressBar={true}
-                        newestOnTop={false}
-                        closeOnClick
-                        pauseOnHover
-                        toastClassName="dark-toast" 
-                        progressClassName="transparent-progress" 
-                    />
-            );
-        }else{
-            return null;
-        }
+const MessageNotification = (props) => {
+    if (props.isVisible) {
+        notify(props);
+        return (
+            <ToastContainer 
+                    position="bottom-right"
+                    autoClose={5000}
+                    hideProgressBar={true}
+                    newestOnTop={false}
+                    closeOnClick
+                    pauseOnHover
+                    toastClassName="dark-toast" 
+                    progressClassName="transparent-progress" 
+                />
+        );
+    } else {
+        return null;
     }
 }
 
