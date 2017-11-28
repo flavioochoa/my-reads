@@ -52,7 +52,7 @@ class Book extends Component {
                 <div className="book-top">
                     <div className="book-cover book-cover-style"
                         onClick={this.showDetails.bind(this)}>
-                        <img alt="book" src={book.imageLinks.smallThumbnail} width="128" height="193"/>
+                        <img alt="book" src={book.imageLinks.smallThumbnail}/>
                     </div>
                     <div className="book-shelf-changer" onClick={this.handleClick} ref={node => { this.node = node; }}>
                     </div>

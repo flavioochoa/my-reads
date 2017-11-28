@@ -7,14 +7,8 @@ import SearchBookContainer from './SearchBookContainer.js';
 const BooksApp = () => {
     return (
         <div className="app">
-            <Route exact path='/' render={({ history }) => (
-                    <BookshelfContainer/>
-                )}
-            />
-            <Route exact path='/search' render={() => (
-                    <SearchBookContainer/>
-                )}
-            />
+            <Route exact path='/' component={BookshelfContainer} />
+            <Route exact path='/search' component={SearchBookContainer}/>
         </div>
     );
 }
